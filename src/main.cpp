@@ -157,9 +157,9 @@ void cizgi_izle(int sol, int orta, int sag) {
     sag_ileri(yavash_hizli);
     sol_ileri(yavash_hizli-40);
   }
-  // else if (digitalRead(CIZGI_SOL) == BEYAZ && sol == BEYAZ && orta == BEYAZ && sag == BEYAZ && digitalRead(CIZGI_SAG) == BEYAZ) {
-  //    tam_don();
-  //  }
+  else if (digitalRead(CIZGI_SOL) == BEYAZ && sol == BEYAZ && orta == BEYAZ && sag == BEYAZ && digitalRead(CIZGI_SAG) == BEYAZ) {
+     tam_don();
+   }
   else {
     ileri();
   }
@@ -211,4 +211,69 @@ void loop() {
   cizgi_izle(orta_left, orta_orta,orta_right);
 
 
+  //
+  // delay(2000);
+  // geri();
+  // delay(2000);
+  // dur();
+  // delay(2000);
+  // ileri();
+  // delay(2000);
+  // dur();
+  // delay(2000);
+
+
+  // =====================
+  // 1. İLERİ GİT
+  // =====================
+  // if (orta_left == 1 || orta_orta == 1 || orta_right == 1) {
+  //   ileri();
+  // }
+  //
+  // // =====================
+  // // 2. SOLA DÖN
+  // // =====================
+  // else if (sol == 1) {
+  //
+  //   dur();
+  //   delay(beklemeSuresi);
+  //
+  //   keskinSolaDon();
+  //   delay(kurtulmaSuresi);
+  //
+  //   while (
+  //     digitalRead(ORTA_CIZGI_SOL) == 0 &&
+  //     digitalRead(ORTA_CIZGI_ORTA) == 0 &&
+  //     digitalRead(ORTA_CIZGI_SAG) == 0
+  //   ) {
+  //     keskinSolaDon();
+  //   }
+  // }
+  //
+  // // =====================
+  // // 3. SAĞA DÖN
+  // // =====================
+  // else if (sag == 1) {
+  //
+  //   dur();
+  //   delay(beklemeSuresi);
+  //
+  //   keskinSagaDon();
+  //   delay(kurtulmaSuresi);
+  //
+  //   while (
+  //     digitalRead(ORTA_CIZGI_SOL) == 0 &&
+  //     digitalRead(ORTA_CIZGI_ORTA) == 0 &&
+  //     digitalRead(ORTA_CIZGI_SAG) == 0
+  //   ) {
+  //     keskinSagaDon();
+  //   }
+  // }
+  //
+  // // =====================
+  // // 4. ÇİZGİ YOK -> GERİ
+  // // =====================
+  // else {
+  //   geri();
+  // }
 }
